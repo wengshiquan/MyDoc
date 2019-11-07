@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="bag" :class="{kong :change}"></div>
+        <div id="hp">
+            <div :style="{width:health+'%'}"> </div>
+        </div>
+        <div id="button">
+            <button @click="hit()" v-show="!change">打</button>
+            <button @click="reset()">重置</button>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
